@@ -22,9 +22,29 @@ export default class App {
         }
         return suma;
     }
+
+    esPrimo(numero) {
+        do {
+            if(numero % 2 == 0 && numero != 2) {
+                return false;
+            } else if( numero % 3 == 0 && numero != 3) {
+                return false;
+            } else if (numero % 2 != 0 && numero % 3 != 0) {
+                return true;
+            } else if (numero == 2 || numero == 3) {
+                return true;
+
+            } 
+          }  while ( numero != 0); 
+        
+    }    
 }
 
 let app = new App();
 
 console.log(app.sumatoriaSerieUno(5));
 console.log(app.sumatoriaSerieDos(5));
+console.log(app.esPrimo(2));
+console.log(app.esPrimo(3));
+console.log(app.esPrimo(4));
+console.log(app.esPrimo(7));
