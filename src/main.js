@@ -37,7 +37,19 @@ export default class App {
             } 
           }  while ( numero != 0); 
         
-    }    
+    }  
+    
+    obtenerMultiplos(inicio, fin) {
+        let multiplos = "";
+        let i = inicio;
+        do {
+            if (i % 3 == 0) {
+                multiplos = multiplos + i.toString();
+            }
+            i++;
+        } while(i <= fin);
+     return multiplos;
+    } 
 }
 
 let app = new App();
@@ -48,3 +60,4 @@ console.log(app.esPrimo(2));
 console.log(app.esPrimo(3));
 console.log(app.esPrimo(4));
 console.log(app.esPrimo(7));
+console.log(app.obtenerMultiplos(10, 25));
