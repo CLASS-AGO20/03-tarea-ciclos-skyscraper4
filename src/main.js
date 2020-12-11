@@ -50,6 +50,11 @@ export default class App {
         } while(i <= fin);
      return multiplos;
     } 
+
+    obtenerImpares(numero1, numero2) {
+
+        
+    }
 }
 
 let app = new App();
